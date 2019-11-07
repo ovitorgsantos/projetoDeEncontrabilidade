@@ -1,0 +1,24 @@
+<section class="carousel">
+    <div class="owl-carousel owl-theme owl-home" id="home">
+        <% banners.forEach((row) => { %>
+        <div class="item carousel-image" style="background-image: url('<%= row.bPhoto %>')">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="carousel-content">
+                    <h1 class="title-carousel text-center">
+                        <%= row.bTitle %>
+                    </h1>
+                    <p class="subtitle-carousel text-center">
+                        <%= row.bSubtitle %>
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <a href="<%= row.bHref %>" class="btn btn-carousel _pt15 _pb15">
+                            Conheça nossas suites!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</section>

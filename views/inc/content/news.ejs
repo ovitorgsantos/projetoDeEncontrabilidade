@@ -1,0 +1,27 @@
+<section class="news _pt70 _pb70" id="news">
+    <div class="container">
+        <h2 class="title-section-1 _pb40">Notícias <span>Recentes</span></h2>
+        <div class="owl-carousel owl-theme owl-news">
+            <% news.forEach((row) => { %>
+            <div class="item">
+                <a href="/noticias/<%= row.nId %>" class="news-link">
+                    <figure class="_mb10">
+                        <div class="overlay">
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <img src="<%= row.nPhoto %>" alt="">
+                    </figure>
+                    <div class="news-content">
+                        <h3 class="title-news text-justify">
+                            <%= row.nTitle %>
+                        </h3>
+                        <p class="subtitle-news text-justify">
+                            <%= row.nSubtitle %>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</section>

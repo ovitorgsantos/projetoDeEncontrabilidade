@@ -1,0 +1,23 @@
+<% if (typeof success === 'string') { %>
+    <% var success = success %>
+    <script>
+        var success = '<%= success %>'
+        
+        Swal.fire({
+            title: success,
+            type: 'success'
+        });
+    </script>
+<% } %>
+
+<% if (typeof error === 'string') { %>
+    <% var error = error %>
+    <script>
+        var error = '<%= error %>'
+        
+        Swal.fire({
+            title: error,
+            type: 'error'
+        });
+    </script>
+<% } %>
